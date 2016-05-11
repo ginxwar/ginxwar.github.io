@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4d40f7807a1899241557"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "dbec9c0313df678cd694"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28430,7 +28430,7 @@
 
 	var _configureStore2 = _interopRequireDefault(_configureStore);
 
-	var _App = __webpack_require__(492);
+	var _App = __webpack_require__(495);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -30032,7 +30032,7 @@
 
 	var _rootReducer2 = _interopRequireDefault(_rootReducer);
 
-	var _ramda = __webpack_require__(491);
+	var _ramda = __webpack_require__(494);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30082,13 +30082,42 @@
 
 	var _redux = __webpack_require__(472);
 
-	var _names = __webpack_require__(490);
+	var _lastname = __webpack_require__(490);
 
-	// default states
+	var _lastname2 = _interopRequireDefault(_lastname);
+
+	var _firstname = __webpack_require__(492);
+
+	var _firstname2 = _interopRequireDefault(_firstname);
+
+	var _gender = __webpack_require__(493);
+
+	var _gender2 = _interopRequireDefault(_gender);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var rootReducer = (0, _redux.combineReducers)({
+	  firstname: _firstname2.default,
+	  lastname: _lastname2.default,
+	  gender: _gender2.default
+	});
+
+	exports.default = rootReducer;
+
+/***/ },
+/* 490 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _names = __webpack_require__(491);
+
 	var initialLastname = 'Stark';
-	var initialFirstname = 'Ned';
 
-	// lastname reducer
 	var lastname = function lastname() {
 	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialLastname : arguments[0];
 	  var action = arguments[1];
@@ -30101,43 +30130,10 @@
 	  }
 	};
 
-	// firstname reducer
-	var firstname = function firstname() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialFirstname : arguments[0];
-	  var action = arguments[1];
-
-	  switch (action.type) {
-	    case _names.CHANGE_FIRST:
-	      return action.firstname;
-	    default:
-	      return state;
-	  }
-	};
-
-	var gender = function gender() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? null : arguments[0];
-	  var action = arguments[1];
-
-	  switch (action.type) {
-	    case _names.FEMALE:
-	      return 'F';
-	    case _names.MALE:
-	      return 'M';
-	    default:
-	      return state;
-	  }
-	};
-
-	var rootReducer = (0, _redux.combineReducers)({
-	  firstname: firstname,
-	  lastname: lastname,
-	  gender: gender
-	});
-
-	exports.default = rootReducer;
+	exports.default = lastname;
 
 /***/ },
-/* 490 */
+/* 491 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30188,7 +30184,63 @@
 	exports.genderMale = genderMale;
 
 /***/ },
-/* 491 */
+/* 492 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _names = __webpack_require__(491);
+
+	var initialFirstname = 'Ned';
+
+	var firstname = function firstname() {
+	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialFirstname : arguments[0];
+	  var action = arguments[1];
+
+	  switch (action.type) {
+	    case _names.CHANGE_FIRST:
+	      return action.firstname;
+	    default:
+	      return state;
+	  }
+	};
+
+	exports.default = firstname;
+
+/***/ },
+/* 493 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _names = __webpack_require__(491);
+
+	var gender = function gender() {
+	  var state = arguments.length <= 0 || arguments[0] === undefined ? null : arguments[0];
+	  var action = arguments[1];
+
+	  switch (action.type) {
+	    case _names.FEMALE:
+	      return 'F';
+	    case _names.MALE:
+	      return 'M';
+	    default:
+	      return state;
+	  }
+	};
+
+	exports.default = gender;
+
+/***/ },
+/* 494 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//  Ramda v0.21.0
@@ -38978,7 +39030,7 @@
 
 
 /***/ },
-/* 492 */
+/* 495 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38995,19 +39047,19 @@
 
 	var _reactRedux = __webpack_require__(465);
 
-	var _InputField = __webpack_require__(493);
+	var _InputField = __webpack_require__(496);
 
 	var _InputField2 = _interopRequireDefault(_InputField);
 
-	var _Radio = __webpack_require__(494);
+	var _Radio = __webpack_require__(497);
 
 	var _Radio2 = _interopRequireDefault(_Radio);
 
-	var _Greeting = __webpack_require__(495);
+	var _Greeting = __webpack_require__(498);
 
 	var _Greeting2 = _interopRequireDefault(_Greeting);
 
-	var _names = __webpack_require__(490);
+	var _names = __webpack_require__(491);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39116,7 +39168,7 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps)(App);
 
 /***/ },
-/* 493 */
+/* 496 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39154,7 +39206,7 @@
 	exports.default = InputField;
 
 /***/ },
-/* 494 */
+/* 497 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39190,7 +39242,7 @@
 	exports.default = Radio;
 
 /***/ },
-/* 495 */
+/* 498 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
