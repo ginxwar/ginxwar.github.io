@@ -1,6 +1,12 @@
 **Warning**: The following documentation is a work in progress and is evolving rapidly.
 
-# First steps
+# Overview
+* [First Steps](#first-steps)
+* [Signing in](#signing-in)
+
+
+
+## First steps
 
 To get started, you first need to register as a new user.  Click on the **Register** link in the upper right navigation bar to sign up:
 
@@ -16,7 +22,7 @@ Once an account is created, you will get an email confirming that your account h
 
 *Note: As of this writing, an administrator will review your account and will grant new accounts manually, but our plan in the future is to have the system automatically approve new accounts.*
 
-# Signing in
+## Signing in
 
 To check the status of your account approval, click on the **Login** link in the upper right navigation bar:
 
